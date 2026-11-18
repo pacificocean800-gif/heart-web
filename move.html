@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<!-- Перенос сада (v143). Эта страничка живёт на старом адресе игры
+     (GitHub Pages): берёт сохранения из браузера и возвращает игрока
+     на новый адрес, неся их в адресе после «#». На сервер они не уходят. -->
+<html><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Сердце</title>
+<style>html,body{margin:0;height:100%;background:#1B0F0A;color:#F2D8A8;font:18px Georgia,serif;
+display:flex;align-items:center;justify-content:center;text-align:center}</style></head>
+<body>Переносим твой сад…
+<script>
+(function () {
+  var back = '';
+  try { back = decodeURIComponent((location.hash.match(/back=([^&]*)/) || [])[1] || ''); } catch (e) {}
+  // Возвращаем только на адрес воркера бота.
+  if (!/^https:\/\/heart-bot\.[a-z0-9-]+\.workers\.dev\/heart-web\//.test(back)) { document.body.textContent = 'Сердце'; return; }
+  var data = {};
+  try {
+    for (var i = 0; i < localStorage.length; i++) {
+      var k = localStorage.key(i);
+      if (k && k.indexOf('flutter.') === 0) data[k] = localStorage.getItem(k);
+    }
+  } catch (e) {}
+  var cut = back.split('#'), hash = cut.slice(1).join('#');
+  var add = 'heartmove=' + encodeURIComponent(JSON.stringify(data));
+  location.replace(cut[0] + '#' + (hash ? hash + '&' : '') + add);
+})();
+</script></body></html>

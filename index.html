@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!--
+    If you are serving your web app in a path other than the root, change the
+    href value below to reflect the base path you are serving from.
+
+    The path provided below has to start and end with a slash "/" in order for
+    it to work correctly.
+
+    For more details:
+    * https://developer.mozilla.org/en-US/docs/Web/HTML/Element/base
+
+    This is a placeholder for base href that will be replaced by the value of
+    the `--base-href` argument provided to `flutter build`.
+  -->
+  <base href="/heart-web/">
+
+  <meta charset="UTF-8">
+  <meta content="IE=Edge" http-equiv="X-UA-Compatible">
+  <meta name="description" content="Сердце: сказочный мир души в картинках.">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
+
+  <!-- iOS meta tags & icons -->
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="Сердце">
+  <link rel="apple-touch-icon" href="icons/Icon-192.png">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="favicon.png"/>
+
+  <title>Сердце</title>
+  <style>
+    html, body { margin: 0; height: 100%; background: #1B0F0A; }
+    #splash { position: fixed; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center;
+      color: #F2D8A8; font: 18px Georgia, serif; transition: opacity .6s; }
+    /* Глаз Наблюдателя на заставке: те же слои, что в игре (web/splash/). */
+    #eye { position: relative; width: 220px; height: 220px; margin-bottom: -24px; }
+    #eye img, #eye .in { position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none; }
+    #eye .in { -webkit-mask-image: url(splash/eye_opening.webp); mask-image: url(splash/eye_opening.webp);
+      -webkit-mask-size: 100% 100%; mask-size: 100% 100%; }
+    #eye .look { position: absolute; inset: 0; will-change: transform; }
+    #eye .rings { animation: spin 40s linear infinite; transform-origin: 50.6% 50.4%; }
+    #eye .iris { animation: spin 160s linear infinite reverse; transform-origin: 50.6% 50.4%; }
+    #eye .pupil { animation: breathe 4s ease-in-out infinite; transform-origin: 50.3% 50.2%; }
+    #eye .lid { opacity: 1; transition: opacity .16s ease-in-out; }
+    #eye::before { content: ''; position: absolute; inset: 18% 8%; border-radius: 50%;
+      background: radial-gradient(closest-side, rgba(242,180,90,.35), rgba(242,180,90,0)); filter: blur(10px); }
+    #wait { margin-top: 14px; min-height: 20px; font-size: 14px; opacity: .7; text-align: center; padding: 0 24px; }
+    @keyframes spin { to { transform: rotate(360deg); } }
+    @keyframes breathe { 50% { transform: scale(1.08); } }
+  </style>
+  <!-- Телеграм Mini App. Вне Телеграма скрипт просто ничего не делает. -->
+  <script src="https://telegram.org/js/telegram-web-app.js"></script>
+  <script src="letters.js"></script>
+  <link rel="manifest" href="manifest.json">
+</head>
+<body>
+  <div id="splash">
+    <div id="eye">
+      <img src="splash/eye_brow.webp" alt="">
+      <img src="splash/eye_white.webp" alt="">
+      <div class="in"><div class="look" id="eyeLook">
+        <img class="iris" src="splash/eye_iris.webp" alt="">
+        <img class="rings" src="splash/eye_iris_rings.webp" alt="">
+        <img class="pupil" src="splash/eye_pupil.webp" alt="">
+      </div></div>
+      <img src="splash/eye_lid_lower.webp" alt="">
+      <img class="lid" id="eyeLid" src="splash/eye_lid_upper.webp" alt="">
+    </div>
+    Сердце просыпается…
+    <div id="wait"></div>
+  </div>
+  <script>
+  // Перенос сада (v143). Игра переехала с GitHub Pages на адрес воркера
+  // (там быстрее), а сохранения живут в браузере отдельно для каждого адреса.
+  // Первый вход на новом адресе: на миг уходим на старый (web/move.html),
+  // он отдаёт сохранения в адресе после «#», и мы кладём их сюда.
+  (function () {
+    var OLD = 'https://pacificocean800-gif.github.io';
+    if (!/\.workers\.dev$/.test(location.hostname)) return;
+    try {
+      var h = location.hash, m = h.match(/(^#|&)heartmove=([^&]*)/);
+      if (m) {
+        var data = JSON.parse(decodeURIComponent(m[2]));
+        // Только если здесь ещё нет своего сада: не смешиваем два.
+        if (!localStorage.getItem('flutter.child.v1')) {
+          for (var k in data) if (k.indexOf('flutter.') === 0 && localStorage.getItem(k) === null) localStorage.setItem(k, data[k]);
+        }
+        localStorage.setItem('heart.moved', '1');
+        var rest = h.replace(m[0], m[1] === '#' ? '#' : '').replace(/^#&/, '#');
+        history.replaceState(null, '', location.pathname + location.search + (rest === '#' ? '' : rest));
+        return;
+      }
+      if (localStorage.getItem('heart.moved') || localStorage.getItem('flutter.child.v1') ||
+          sessionStorage.getItem('heart.moveTried')) return;
+      sessionStorage.setItem('heart.moveTried', '1');
+      window.heartMoving = true;
+      var t = document.getElementById('splash');
+      if (t && t.childNodes[2]) t.childNodes[2].nodeValue = '\n    Переносим твой сад…\n    ';
+      location.replace(OLD + '/heart-web/move.html#back=' + encodeURIComponent(location.href));
+    } catch (e) {}
+  })();
+  </script>
+  <script>
+  // Медленная сеть: через 12 секунд честно пишем, что игра ещё грузится,
+  // и сколько главных частей уже пришло (код игры и движок рисования).
+  (function () {
+    var got = {}, el = document.getElementById('wait'), shown = false;
+    function draw() {
+      if (!shown || !el) return;
+      var n = (got.code ? 1 : 0) + (got.engine ? 1 : 0);
+      el.textContent = 'Связь медленная, сердце ещё грузится: ' + n + ' из 2';
+    }
+    try {
+      new PerformanceObserver(function (l) {
+        l.getEntries().forEach(function (e) {
+          if (/main\.dart\.js/.test(e.name)) got.code = true;
+          if (/canvaskit\.wasm/.test(e.name)) got.engine = true;
+        });
+        draw();
+      }).observe({ type: 'resource', buffered: true });
+    } catch (e) {}
+    setTimeout(function () { shown = true; draw(); }, 12000);
+  })();
+  </script>
+  <script>
+  // Глаз на заставке: открывается, моргает и смотрит за пальцем или мышкой.
+  (function () {
+    var eye = document.getElementById('eye'), look = document.getElementById('eyeLook'), lid = document.getElementById('eyeLid');
+    if (!eye) return;
+    var tx = 0, ty = 0, x = 0, y = 0, last = -1e9, alive = true;
+    function aim(e) {
+      var p = e.touches ? e.touches[0] : e, r = eye.getBoundingClientRect();
+      var dx = (p.clientX - (r.left + r.width / 2)) / (r.width * 1.2);
+      var dy = (p.clientY - (r.top + r.height / 2)) / (r.height * 1.2);
+      var m = Math.hypot(dx, dy); if (m > 1) { dx /= m; dy /= m; }
+      tx = dx; ty = dy; last = performance.now();
+    }
+    ['pointermove', 'pointerdown', 'touchstart', 'touchmove'].forEach(function (t) {
+      window.addEventListener(t, aim, { passive: true });
+    });
+    function frame(now) {
+      if (!alive) return;
+      if (now - last > 2500) { tx = Math.sin(now / 1700) * 0.8; ty = Math.sin(now / 2300) * 0.5; } // сам осматривается
+      x += (tx - x) * 0.12; y += (ty - y) * 0.12;
+      look.style.transform = 'translate(' + (x * 0.09 * 220).toFixed(1) + 'px,' + (y * 0.05 * 220).toFixed(1) + 'px)';
+      requestAnimationFrame(frame);
+    }
+    requestAnimationFrame(frame);
+    function blink(n) {
+      lid.style.opacity = 1;
+      setTimeout(function () { lid.style.opacity = 0; if (n > 1) setTimeout(function () { blink(n - 1); }, 220); }, 170);
+    }
+    setTimeout(function () { lid.style.opacity = 0; }, 350); // открывает глаз
+    (function loop() { setTimeout(function () { if (alive) { blink(Math.random() < 0.25 ? 2 : 1); loop(); } }, 3000 + Math.random() * 3000); })();
+    window.addEventListener('pointerdown', function () { blink(2); });
+    window.addEventListener('flutter-first-frame', function () { setTimeout(function () { alive = false; }, 800); });
+  })();
+
+  window.addEventListener('flutter-first-frame', function () {
+    var s = document.getElementById('splash');
+    if (s) { s.style.opacity = 0; setTimeout(function () { s.remove(); }, 700); }
+  });
+
+  // Мост к Телеграму для Dart (lib/telegram/tg_web.dart).
+  window.heartTg = (function () {
+    var wa = window.Telegram && window.Telegram.WebApp;
+    var on = !!(wa && wa.initData);
+    if (on) {
+      try { wa.ready(); wa.expand(); } catch (e) {}
+      // Свайп вниз внутри игры не должен закрывать приложение.
+      try { wa.disableVerticalSwipes(); } catch (e) {}
+      try { wa.setHeaderColor('#1B0F0A'); wa.setBackgroundColor('#1B0F0A'); wa.setBottomBarColor('#1B0F0A'); } catch (e) {}
+    }
+    function post(api, path, data) {
+      var body = Object.assign({ initData: wa.initData }, data || {});
+      return fetch(api + path, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(body) })
+        .then(function (r) { return r.ok ? r.json() : Promise.reject(r.status); });
+    }
+    return {
+      on: function () { return on; },
+      buy: function (api, item) {
+        return new Promise(function (done) {
+          if (!on || !api) { done('failed'); return; }
+          post(api, '/invoice', { item: item }).then(function (j) {
+            wa.openInvoice(j.link, function (status) { done(status); });
+          }).catch(function () { done('failed'); });
+        });
+      },
+      purchases: function (api) {
+        if (!on || !api) return Promise.resolve(null);
+        return post(api, '/purchases', {}).then(function (j) { return JSON.stringify(j); }).catch(function () { return null; });
+      },
+      back: function (show) {
+        if (!on) return;
+        try { show ? wa.BackButton.show() : wa.BackButton.hide(); } catch (e) {}
+      },
+      onBack: function (f) { if (on) try { wa.BackButton.onClick(function () { f(); }); } catch (e) {} },
+      // ---- письма-сверки (lib/compat/letters.dart) ----
+      startParam: function () {
+        try { return (on && wa.initDataUnsafe && wa.initDataUnsafe.start_param) || null; } catch (e) { return null; }
+      },
+      call: function (api, path, data) {
+        if (!on || !api) return Promise.resolve(null);
+        return post(api, path, JSON.parse(data || '{}')).then(function (j) { return JSON.stringify(j); })
+          .catch(function (st) { return JSON.stringify({ error: String(st) }); });
+      },
+      seal: function (text, key) {
+        return window.heartLetters.seal(text, key || null).then(function (r) { return JSON.stringify(r); });
+      },
+      unseal: function (box, key) { return window.heartLetters.unseal(box, key); },
+      share: function (prepared) {
+        return new Promise(function (done) {
+          try { wa.shareMessage(prepared, function (sent) { done(sent ? 'sent' : 'cancelled'); }); }
+          catch (e) { done('failed'); }
+        });
+      },
+      shareUrl: function (url, text) {
+        try {
+          wa.openTelegramLink('https://t.me/share/url?url=' + encodeURIComponent(url) + '&text=' + encodeURIComponent(text));
+        } catch (e) {}
+      },
+      openTg: function (url) {
+        try { wa.openTelegramLink(url); } catch (e) {}
+      },
+      askWrite: function () {
+        return new Promise(function (done) {
+          try { wa.requestWriteAccess(function (ok) { done(!!ok); }); } catch (e) { done(false); }
+        });
+      }
+    };
+  })();
+  </script>
+    <!--
+    You can customize the "flutter_bootstrap.js" script.
+    This is useful to provide a custom configuration to the Flutter loader
+    or to give the user feedback during the initialization process.
+
+    For more details:
+    * https://docs.flutter.dev/platform-integration/web/initialization
+  -->
+  <script>
+  // Телефоны рисуют в 3 раза больше точек, чем нужно для мягкого сказочного
+  // мира. Ограничиваем плотность, чтобы картинка шла плавно.
+  (function () {
+    var real = window.devicePixelRatio || 1;
+    var capped = Math.min(real, 1.5);
+    try { Object.defineProperty(window, 'devicePixelRatio', { get: function () { return capped; }, configurable: true }); } catch (e) {}
+  })();
+</script>
+<script>
+  // Снять старый service worker Flutter, если он остался с прошлых версий.
+  try {
+    if (navigator.serviceWorker) navigator.serviceWorker.getRegistrations()
+      .then(function (rs) { rs.forEach(function (r) { r.unregister(); }); }).catch(function () {});
+  } catch (e) {}
+</script>
+<script src="flutter_bootstrap.js" async></script>
+</body>
+</html>

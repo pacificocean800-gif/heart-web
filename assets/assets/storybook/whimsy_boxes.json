@@ -1,0 +1,1244 @@
+{
+ "whimsy_tree_trust": {
+  "of": "tree_trust_l4",
+  "box": [
+   0.0137,
+   0.333,
+   0.9918,
+   0.9884
+  ],
+  "size": [
+   729,
+   1036
+  ],
+  "orig_size": [
+   729,
+   1024
+  ],
+  "orig_at": [
+   0,
+   0
+  ],
+  "scale": 0.779,
+  "variant": 1
+ },
+ "whimsy_tree_love": {
+  "of": "tree_love_l4",
+  "box": [
+   0.0124,
+   0.3447,
+   0.9848,
+   0.9951
+  ],
+  "size": [
+   724,
+   1024
+  ],
+  "orig_size": [
+   721,
+   1024
+  ],
+  "orig_at": [
+   3,
+   0
+  ],
+  "scale": 0.72,
+  "variant": 1
+ },
+ "whimsy_tree_meaning": {
+  "of": "tree_meaning_l4",
+  "box": [
+   0.0241,
+   0.333,
+   0.9787,
+   0.999
+  ],
+  "size": [
+   705,
+   1024
+  ],
+  "orig_size": [
+   693,
+   1024
+  ],
+  "orig_at": [
+   4,
+   0
+  ],
+  "scale": 0.66,
+  "variant": 1
+ },
+ "whimsy_tree_value": {
+  "of": "tree_value_l4",
+  "box": [
+   0.0255,
+   0.326,
+   0.9901,
+   0.979
+  ],
+  "size": [
+   706,
+   1046
+  ],
+  "orig_size": [
+   706,
+   1024
+  ],
+  "orig_at": [
+   0,
+   0
+  ],
+  "scale": 0.661,
+  "variant": 3
+ },
+ "whimsy_tree_power": {
+  "of": "tree_power_l4",
+  "box": [
+   0.0469,
+   0.326,
+   0.9943,
+   0.9762
+  ],
+  "size": [
+   703,
+   1049
+  ],
+  "orig_size": [
+   703,
+   1024
+  ],
+  "orig_at": [
+   0,
+   0
+  ],
+  "scale": 0.653,
+  "variant": 1
+ },
+ "whimsy_tree_expression": {
+  "of": "tree_expression_l4",
+  "box": [
+   0.0056,
+   0.3282,
+   0.9594,
+   0.9827
+  ],
+  "size": [
+   714,
+   1042
+  ],
+  "orig_size": [
+   714,
+   1024
+  ],
+  "orig_at": [
+   0,
+   0
+  ],
+  "scale": 0.694,
+  "variant": 2
+ },
+ "whimsy_tree_acceptance": {
+  "of": "tree_acceptance_l4",
+  "box": [
+   0.0265,
+   0.3295,
+   0.996,
+   0.9884
+  ],
+  "size": [
+   756,
+   1035
+  ],
+  "orig_size": [
+   756,
+   1024
+  ],
+  "orig_at": [
+   0,
+   0
+  ],
+  "scale": 0.609,
+  "variant": 1
+ },
+ "whimsy_tree_worthlessness": {
+  "of": "tree_worthlessness_s0",
+  "box": [
+   0.0066,
+   0.332,
+   0.887,
+   0.9932
+  ],
+  "size": [
+   752,
+   1030
+  ],
+  "orig_size": [
+   752,
+   1024
+  ],
+  "orig_at": [
+   0,
+   0
+  ],
+  "scale": 0.691,
+  "variant": 2
+ },
+ "whimsy_tree_hiding": {
+  "of": "tree_hiding_s0",
+  "box": [
+   0.0095,
+   0.333,
+   0.8608,
+   1.0
+  ],
+  "size": [
+   740,
+   1024
+  ],
+  "orig_size": [
+   740,
+   1024
+  ],
+  "orig_at": [
+   0,
+   0
+  ],
+  "scale": 0.872,
+  "variant": 1
+ },
+ "whimsy_tree_hostility": {
+  "of": "tree_hostility_s0",
+  "box": [
+   0.007,
+   0.334,
+   0.8428,
+   1.0
+  ],
+  "size": [
+   719,
+   1024
+  ],
+  "orig_size": [
+   719,
+   1024
+  ],
+  "orig_at": [
+   0,
+   0
+  ],
+  "scale": 0.716,
+  "variant": 1
+ },
+ "whimsy_tree_helplessness": {
+  "of": "tree_helplessness_s0",
+  "box": [
+   0.0072,
+   0.3257,
+   0.9117,
+   0.9752
+  ],
+  "size": [
+   691,
+   1050
+  ],
+  "orig_size": [
+   691,
+   1024
+  ],
+  "orig_at": [
+   0,
+   0
+  ],
+  "scale": 0.596,
+  "variant": 1
+ },
+ "whimsy_tree_alienation": {
+  "of": "tree_alienation_s0",
+  "box": [
+   0.0059,
+   0.3248,
+   0.8472,
+   0.9752
+  ],
+  "size": [
+   674,
+   1050
+  ],
+  "orig_size": [
+   674,
+   1024
+  ],
+  "orig_at": [
+   0,
+   0
+  ],
+  "scale": 0.63,
+  "variant": 2
+ },
+ "whimsy_tree_emptiness": {
+  "of": "tree_emptiness_s0",
+  "box": [
+   0.0325,
+   0.334,
+   0.9851,
+   1.0
+  ],
+  "size": [
+   738,
+   1024
+  ],
+  "orig_size": [
+   735,
+   1024
+  ],
+  "orig_at": [
+   0,
+   0
+  ],
+  "scale": 0.784,
+  "variant": 2
+ },
+ "whimsy_tree_resentment": {
+  "of": "tree_resentment_s0",
+  "box": [
+   0.0281,
+   0.3279,
+   0.975,
+   0.9846
+  ],
+  "size": [
+   641,
+   1040
+  ],
+  "orig_size": [
+   641,
+   1024
+  ],
+  "orig_at": [
+   0,
+   0
+  ],
+  "scale": 0.707,
+  "variant": 1
+ },
+ "whimsy_forest_tree_1": {
+  "of": "forest_tree_1",
+  "box": [
+   0.1042,
+   0.0391,
+   0.8971,
+   0.9596
+  ],
+  "size": [
+   768,
+   768
+  ],
+  "orig_size": [
+   768,
+   768
+  ],
+  "orig_at": [
+   0,
+   0
+  ],
+  "scale": 1.0,
+  "variant": 2
+ },
+ "whimsy_forest_tree_2": {
+  "of": "forest_tree_2",
+  "box": [
+   0.1224,
+   0.0391,
+   0.8789,
+   0.9596
+  ],
+  "size": [
+   768,
+   768
+  ],
+  "orig_size": [
+   768,
+   768
+  ],
+  "orig_at": [
+   0,
+   0
+  ],
+  "scale": 1.0,
+  "variant": 2
+ },
+ "whimsy_forest_tree_3": {
+  "of": "forest_tree_3",
+  "box": [
+   0.1094,
+   0.0391,
+   0.8893,
+   0.9596
+  ],
+  "size": [
+   768,
+   768
+  ],
+  "orig_size": [
+   768,
+   768
+  ],
+  "orig_at": [
+   0,
+   0
+  ],
+  "scale": 1.0,
+  "variant": 1
+ },
+ "whimsy_forest_tree_4": {
+  "of": "forest_tree_4",
+  "box": [
+   0.1328,
+   0.0391,
+   0.8672,
+   0.9596
+  ],
+  "size": [
+   768,
+   768
+  ],
+  "orig_size": [
+   768,
+   768
+  ],
+  "orig_at": [
+   0,
+   0
+  ],
+  "scale": 1.0,
+  "variant": 2
+ },
+ "whimsy_forest_bush_1": {
+  "of": "forest_bush_1",
+  "box": [
+   0.0391,
+   0.1133,
+   0.9596,
+   0.9596
+  ],
+  "size": [
+   768,
+   768
+  ],
+  "orig_size": [
+   768,
+   768
+  ],
+  "orig_at": [
+   0,
+   0
+  ],
+  "scale": 1.0,
+  "variant": 2
+ },
+ "whimsy_forest_bush_2": {
+  "of": "forest_bush_2",
+  "box": [
+   0.0508,
+   0.0391,
+   0.9492,
+   0.9596
+  ],
+  "size": [
+   768,
+   768
+  ],
+  "orig_size": [
+   768,
+   768
+  ],
+  "orig_at": [
+   0,
+   0
+  ],
+  "scale": 1.0,
+  "variant": 2
+ },
+ "whimsy_forest_bush_3": {
+  "of": "forest_bush_3",
+  "box": [
+   0.0482,
+   0.0391,
+   0.9518,
+   0.9596
+  ],
+  "size": [
+   768,
+   768
+  ],
+  "orig_size": [
+   768,
+   768
+  ],
+  "orig_at": [
+   0,
+   0
+  ],
+  "scale": 1.0,
+  "variant": 2
+ },
+ "whimsy_forest_mushroom_1": {
+  "of": "forest_mushroom_1",
+  "box": [
+   0.1068,
+   0.0391,
+   0.8919,
+   0.9596
+  ],
+  "size": [
+   768,
+   768
+  ],
+  "orig_size": [
+   768,
+   768
+  ],
+  "orig_at": [
+   0,
+   0
+  ],
+  "scale": 1.0,
+  "variant": 2
+ },
+ "whimsy_forest_mushroom_2": {
+  "of": "forest_mushroom_2",
+  "box": [
+   0.1146,
+   0.0391,
+   0.8841,
+   0.9596
+  ],
+  "size": [
+   768,
+   768
+  ],
+  "orig_size": [
+   768,
+   768
+  ],
+  "orig_at": [
+   0,
+   0
+  ],
+  "scale": 1.0,
+  "variant": 2
+ },
+ "whimsy_forest_mushroom_3": {
+  "of": "forest_mushroom_3",
+  "box": [
+   0.0599,
+   0.0391,
+   0.9414,
+   0.9596
+  ],
+  "size": [
+   768,
+   768
+  ],
+  "orig_size": [
+   768,
+   768
+  ],
+  "orig_at": [
+   0,
+   0
+  ],
+  "scale": 1.0,
+  "variant": 2
+ },
+ "whimsy_forest_stone_1": {
+  "of": "forest_stone_1",
+  "box": [
+   0.0729,
+   0.0391,
+   0.9271,
+   0.9596
+  ],
+  "size": [
+   768,
+   768
+  ],
+  "orig_size": [
+   768,
+   768
+  ],
+  "orig_at": [
+   0,
+   0
+  ],
+  "scale": 1.0,
+  "variant": 1
+ },
+ "whimsy_forest_stone_2": {
+  "of": "forest_stone_2",
+  "box": [
+   0.0391,
+   0.5195,
+   0.9596,
+   0.9596
+  ],
+  "size": [
+   768,
+   768
+  ],
+  "orig_size": [
+   768,
+   768
+  ],
+  "orig_at": [
+   0,
+   0
+  ],
+  "scale": 1.0,
+  "variant": 2
+ },
+ "whimsy_flora_trust": {
+  "of": "flora_trust_lantern_lily_1",
+  "box": [
+   0.0391,
+   0.0879,
+   0.9609,
+   0.9609
+  ],
+  "size": [
+   512,
+   512
+  ],
+  "orig_size": [
+   512,
+   512
+  ],
+  "orig_at": [
+   0,
+   0
+  ],
+  "scale": 1.0,
+  "variant": 3
+ },
+ "whimsy_flora_love": {
+  "of": "flora_love_twin_roses_1",
+  "box": [
+   0.125,
+   0.0391,
+   0.875,
+   0.9609
+  ],
+  "size": [
+   512,
+   512
+  ],
+  "orig_size": [
+   512,
+   512
+  ],
+  "orig_at": [
+   0,
+   0
+  ],
+  "scale": 1.0,
+  "variant": 2
+ },
+ "whimsy_flora_meaning": {
+  "of": "flora_meaning_compass_flower_1",
+  "box": [
+   0.125,
+   0.0391,
+   0.875,
+   0.9609
+  ],
+  "size": [
+   512,
+   512
+  ],
+  "orig_size": [
+   512,
+   512
+  ],
+  "orig_at": [
+   0,
+   0
+  ],
+  "scale": 1.0,
+  "variant": 1
+ },
+ "whimsy_flora_value": {
+  "of": "flora_value_heart_cactus_1",
+  "box": [
+   0.043,
+   0.0391,
+   0.957,
+   0.959
+  ],
+  "size": [
+   512,
+   512
+  ],
+  "orig_size": [
+   512,
+   512
+  ],
+  "orig_at": [
+   0,
+   0
+  ],
+  "scale": 1.0,
+  "variant": 1
+ },
+ "whimsy_flora_power": {
+  "of": "flora_power_ember_tulips_1",
+  "box": [
+   0.123,
+   0.0391,
+   0.877,
+   0.9609
+  ],
+  "size": [
+   512,
+   512
+  ],
+  "orig_size": [
+   512,
+   512
+  ],
+  "orig_at": [
+   0,
+   0
+  ],
+  "scale": 1.0,
+  "variant": 2
+ },
+ "whimsy_flora_expression": {
+  "of": "flora_expression_flute_reeds_1",
+  "box": [
+   0.1895,
+   0.0391,
+   0.8105,
+   0.959
+  ],
+  "size": [
+   512,
+   512
+  ],
+  "orig_size": [
+   512,
+   512
+  ],
+  "orig_at": [
+   0,
+   0
+  ],
+  "scale": 1.0,
+  "variant": 2
+ },
+ "whimsy_flora_acceptance": {
+  "of": "flora_acceptance_drowsy_poppies_1",
+  "box": [
+   0.1113,
+   0.0391,
+   0.8867,
+   0.959
+  ],
+  "size": [
+   512,
+   512
+  ],
+  "orig_size": [
+   512,
+   512
+  ],
+  "orig_at": [
+   0,
+   0
+  ],
+  "scale": 1.0,
+  "variant": 1
+ },
+ "whimsy_flora_worthlessness": {
+  "of": "flora_worthlessness_shy_violet_1_s0",
+  "box": [
+   0.1387,
+   0.052,
+   0.8613,
+   0.9595
+  ],
+  "size": [
+   512,
+   519
+  ],
+  "orig_size": [
+   512,
+   512
+  ],
+  "orig_at": [
+   0,
+   7
+  ],
+  "scale": 1.0,
+  "variant": 1
+ },
+ "whimsy_flora_hiding": {
+  "of": "flora_hiding_shell_bud_1_s0",
+  "box": [
+   0.1133,
+   0.0391,
+   0.8867,
+   0.9609
+  ],
+  "size": [
+   512,
+   512
+  ],
+  "orig_size": [
+   512,
+   512
+  ],
+  "orig_at": [
+   0,
+   0
+  ],
+  "scale": 1.0,
+  "variant": 3
+ },
+ "whimsy_flora_hostility": {
+  "of": "flora_hostility_snap_flower_1_s0",
+  "box": [
+   0.1035,
+   0.0391,
+   0.8984,
+   0.9609
+  ],
+  "size": [
+   512,
+   512
+  ],
+  "orig_size": [
+   512,
+   512
+  ],
+  "orig_at": [
+   0,
+   0
+  ],
+  "scale": 1.0,
+  "variant": 1
+ },
+ "whimsy_flora_helplessness": {
+  "of": "flora_helplessness_sleepy_caps_1_s0",
+  "box": [
+   0.1094,
+   0.0391,
+   0.8906,
+   0.959
+  ],
+  "size": [
+   512,
+   512
+  ],
+  "orig_size": [
+   512,
+   512
+  ],
+  "orig_at": [
+   0,
+   0
+  ],
+  "scale": 1.0,
+  "variant": 2
+ },
+ "whimsy_flora_alienation": {
+  "of": "flora_alienation_ice_bell_1_s0",
+  "box": [
+   0.0566,
+   0.0391,
+   0.9434,
+   0.9609
+  ],
+  "size": [
+   512,
+   512
+  ],
+  "orig_size": [
+   512,
+   512
+  ],
+  "orig_at": [
+   0,
+   0
+  ],
+  "scale": 1.0,
+  "variant": 1
+ },
+ "whimsy_flora_emptiness": {
+  "of": "flora_emptiness_hollow_reeds_1_s0",
+  "box": [
+   0.0859,
+   0.0391,
+   0.916,
+   0.9609
+  ],
+  "size": [
+   512,
+   512
+  ],
+  "orig_size": [
+   512,
+   512
+  ],
+  "orig_at": [
+   0,
+   0
+  ],
+  "scale": 1.0,
+  "variant": 2
+ },
+ "whimsy_flora_resentment": {
+  "of": "flora_resentment_burr_ball_1_s0",
+  "box": [
+   0.1211,
+   0.0391,
+   0.8789,
+   0.959
+  ],
+  "size": [
+   512,
+   512
+  ],
+  "orig_size": [
+   512,
+   512
+  ],
+  "orig_at": [
+   0,
+   0
+  ],
+  "scale": 1.0,
+  "variant": 2
+ },
+ "whimsy_plant_sprout": {
+  "of": "plant_sprout",
+  "box": [
+   0.2917,
+   0.0391,
+   0.7096,
+   0.9596
+  ],
+  "size": [
+   768,
+   768
+  ],
+  "orig_size": [
+   768,
+   768
+  ],
+  "orig_at": [
+   0,
+   0
+  ],
+  "scale": 1.0,
+  "variant": 1
+ },
+ "whimsy_plant_bush": {
+  "of": "plant_bush",
+  "box": [
+   0.0885,
+   0.0389,
+   0.9102,
+   0.9547
+  ],
+  "size": [
+   768,
+   772
+  ],
+  "orig_size": [
+   768,
+   768
+  ],
+  "orig_at": [
+   0,
+   0
+  ],
+  "scale": 1.0,
+  "variant": 1
+ },
+ "whimsy_plant_fruit": {
+  "of": "plant_fruit",
+  "box": [
+   0.0651,
+   0.0391,
+   0.9362,
+   0.9596
+  ],
+  "size": [
+   768,
+   768
+  ],
+  "orig_size": [
+   768,
+   768
+  ],
+  "orig_at": [
+   0,
+   0
+  ],
+  "scale": 1.0,
+  "variant": 2
+ },
+ "whimsy_bridge_light": {
+  "of": "bridge_light",
+  "box": [
+   0.0117,
+   0.2825,
+   0.9948,
+   0.8401
+  ],
+  "size": [
+   772,
+   269
+  ],
+  "orig_size": [
+   768,
+   158
+  ],
+  "orig_at": [
+   4,
+   72
+  ],
+  "scale": 1.0,
+  "variant": 1
+ },
+ "whimsy_bridge_root": {
+  "of": "bridge_root",
+  "box": [
+   0.0052,
+   0.2982,
+   0.9935,
+   0.9679
+  ],
+  "size": [
+   768,
+   218
+  ],
+  "orig_size": [
+   768,
+   154
+  ],
+  "orig_at": [
+   0,
+   61
+  ],
+  "scale": 1.0,
+  "variant": 3
+ },
+ "whimsy_bridge_lily_leaf": {
+  "of": "bridge_lily_leaf",
+  "box": [
+   0.0103,
+   0.173,
+   0.9833,
+   0.8789
+  ],
+  "size": [
+   780,
+   289
+  ],
+  "orig_size": [
+   768,
+   212
+  ],
+  "orig_at": [
+   4,
+   46
+  ],
+  "scale": 1.0,
+  "variant": 1
+ },
+ "whimsy_bridge_willow_arch": {
+  "of": "bridge_willow_arch",
+  "box": [
+   0.0438,
+   0.3345,
+   0.9432,
+   0.7324
+  ],
+  "size": [
+   845,
+   553
+  ],
+  "orig_size": [
+   768,
+   228
+  ],
+  "orig_at": [
+   33,
+   181
+  ],
+  "scale": 1.0,
+  "variant": 3
+ },
+ "whimsy_hero_child_boy": {
+  "of": "hero_child_boy_idle",
+  "box": [
+   0.3242,
+   0.0391,
+   0.6758,
+   0.9596
+  ],
+  "size": [
+   768,
+   768
+  ],
+  "orig_size": [
+   768,
+   768
+  ],
+  "orig_at": [
+   0,
+   0
+  ],
+  "scale": 1.0,
+  "variant": 2
+ },
+ "whimsy_hero_child_girl": {
+  "of": "hero_child_girl_idle",
+  "box": [
+   0.2656,
+   0.0391,
+   0.7357,
+   0.9596
+  ],
+  "size": [
+   768,
+   768
+  ],
+  "orig_size": [
+   768,
+   768
+  ],
+  "orig_at": [
+   0,
+   0
+  ],
+  "scale": 1.0,
+  "variant": 2
+ },
+ "whimsy_hero_attention": {
+  "of": "hero_attention_idle",
+  "box": [
+   0.1224,
+   0.0391,
+   0.8763,
+   0.9596
+  ],
+  "size": [
+   768,
+   768
+  ],
+  "orig_size": [
+   768,
+   768
+  ],
+  "orig_at": [
+   0,
+   0
+  ],
+  "scale": 1.0,
+  "variant": 1
+ },
+ "whimsy_hero_curiosity": {
+  "of": "hero_curiosity_idle",
+  "box": [
+   0.0885,
+   0.0391,
+   0.9128,
+   0.9596
+  ],
+  "size": [
+   768,
+   768
+  ],
+  "orig_size": [
+   768,
+   768
+  ],
+  "orig_at": [
+   0,
+   0
+  ],
+  "scale": 1.0,
+  "variant": 2
+ },
+ "whimsy_hero_memory": {
+  "of": "hero_memory_idle",
+  "box": [
+   0.2448,
+   0.0391,
+   0.7565,
+   0.9596
+  ],
+  "size": [
+   768,
+   768
+  ],
+  "orig_size": [
+   768,
+   768
+  ],
+  "orig_at": [
+   0,
+   0
+  ],
+  "scale": 1.0,
+  "variant": 2
+ },
+ "whimsy_hero_character": {
+  "of": "hero_character_awake",
+  "box": [
+   0.0573,
+   0.0391,
+   0.9414,
+   0.9596
+  ],
+  "size": [
+   768,
+   768
+  ],
+  "orig_size": [
+   768,
+   768
+  ],
+  "orig_at": [
+   0,
+   0
+  ],
+  "scale": 1.0,
+  "variant": 3
+ },
+ "whimsy_hero_dream": {
+  "of": "hero_dream_idle",
+  "box": [
+   0.1094,
+   0.0391,
+   0.8906,
+   0.9596
+  ],
+  "size": [
+   768,
+   768
+  ],
+  "orig_size": [
+   768,
+   768
+  ],
+  "orig_at": [
+   0,
+   0
+  ],
+  "scale": 1.0,
+  "variant": 3
+ }
+}
